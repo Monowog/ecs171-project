@@ -14,20 +14,20 @@
 \author{
   \centering
   \IEEEauthorblockN{\Large Group 27}
-  \IEEEauthorblockA{\large Jackson Cmelak, Brian Li, Meghana Manepalli, Susanna Mathew}
+  \IEEEauthorblockA{\large Jackson Cmelak, Brian Li, Leader: Meghana Manepalli, Susanna Mathew}
 }
 
 \maketitle
 
-\large \textbf{Note: The group leader changed from Susanna Mathew to Meghana Manepalli}
+\textbf{Note: Group leader changed to Meghana Manepalli.}
 
-\section{Problem Statement}
+\section{\underline{Problem Statement}}
 
-The average citizen of a developed country produces roughly 1,000 pounds of waste yearly, highlighting the importance of the waste management industry. From discarded packaging materials to everyday household items, waste management facilities identify, evaluate, and manage a variety of waste. Current waste management systems are outdated \cite{b1}, leading to the widespread, disorganized disposal of this waste, which poses a significant threat to the environment, public health, and our resource sustainability. The far-reaching consequences of mismanaged waste include land pollution, contamination of bodies of water, and depletion of natural resources.
+The average citizen of a developed country produces roughly 1,000 pounds of waste annually, highlighting the importance of the waste management industry. Since waste management facilities identify, evaluate, and manage a vast range of materials, it is imperative for them to be efficient and flexible. Unfortunately, current waste management systems are outdated \cite{b1}, leading to the widespread, disorganized disposal of this waste, and posing a significant threat to the environment, public health, and resource sustainability. The far-reaching consequences of this mismanaged waste include land pollution, contamination of the water supply, and depletion of natural resources.
 
-A central problem in waste management is sorting all types of household waste. Existing methods of waste segregation often rely on human judgment are error-prone and inconsistent, leading to improper disposal and inadequate recycling rates. To address this issue, our project aims to develop a garbage classification system using machine learning techniques. 
+The central problem in waste management is properly sorting the many types of common waste. Existing methods of waste segregation that rely on human judgment are error-prone and inconsistent, leading to improper disposal and inadequate recycling rates. To address this issue, our project aims to develop a streamlined machine learning approach to automatically sort the most common types of refuse. 
 
-If a robust and accurate garbage classification is successfully implemented, it can be used in many different fields. Some examples include:
+If robust and accurate classification is successfully implemented, it can be used in many different fields. Some examples include:
 
 \begin{itemize}
   \item Waste Management and Recycling    
@@ -42,18 +42,29 @@ If a robust and accurate garbage classification is successfully implemented, it 
     \begin{itemize}
       \item Cities can optimize waste collection routes by using the model to track the amount and type of waste in different areas, leading to more efficient garbage collection systems. 
     \end{itemize}
-  \item Education
-    \begin{itemize}
-      \item The model’s training and testing data can be used to educate individuals and communities on the importance of proper waste segregation and management. 
-    \end{itemize}
 \end{itemize}
 
 
-\section{Dataset Description}
+\section{\underline{Dataset Description}}
+The dataset selected for this project is a robust repository of thousands of images featuring different materials with various colors, patterns, lightings, and points of view.
 
-\section{Goals}
+\begin{itemize}
+    \item \textbf{Creator:} C. Chang on Kaggle
+    \item \textbf{Title:} 'Garbage Classification'
+    \item \textbf{Details:} 6 categories; Cardboard (403 images), Glass (501 images), Metal (410 images), Paper (594 images), Plastic (482 images), and Misc. Trash (137 images). 
+    \item \textbf{Format:} Images are kept separated in material-specific folders, along with text files containing pre-selected training and testing subsets. These subsets contain lists of the image names, along with numbers pertaining to what type of material the image contains.
+\end{itemize}
 
-\section{Project Timeline}
+\section{\underline{Goals}}
+Our project aims to develop a machine learning-based garbage classification system with the following key objectives:
+\begin{itemize}
+    \item \textbf{Data Preparation:} Collect and  preprocess a diverse data set of waste material images including cardboard, glass, metal, paper, plastic, and trash. Ensure data cleanliness, balance, and integrity to facilitate model training.
+    \item \textbf{Model Development:} Implement machine learning and deep learning algorithms, such as convolutional neural networks (CNNs), to create a robust classification model.
+    \item \textbf{Evaluation:} Rigorously test and evaluate model performance using metrics such as accuracy, precision, recall, and F1-score. Utilize cross-validation to assess the model's generalization capability and identify potential overfitting or underfitting issues.
+    \item \textbf{User Interface:} Develop an intuitive web-based interface that allows users to upload images of waste materials. The interface should invoke the classification model and provide real-time predictions on the type of waste, enhancing user accessibility.
+    \item \textbf{Documentation:} Create comprehensive documentation detailing the data collection process, model architecture, hyperparameters, and performance results. This documentation will serve as a valuable resource for future machine learning practitioners and researchers.
+\end{itemize}
+\section{\underline{Project Timeline}}
 \subsection{\textbf{Description and Background: 10/16 - 10/20}}
 \begin{itemize}
     \item Complete "Introduction and Background" rough draft.
@@ -65,7 +76,7 @@ If a robust and accurate garbage classification is successfully implemented, it 
     \item Be able to describe different models and their pros and cons.
     \item Work on feature engineering, selection, and extraction necessary, as well as use data visualization and statistical techniques to better understand our dataset. 
 \end{itemize}
-\subsection{\textbf{Building Model and Finetuning: 11/03 - 11/17}}
+\subsection{\textbf{Building Model and Fine-tuning: 11/03 - 11/17}}
 \begin{itemize}
     \item Complete "Proposed Methodology and Experimental Results" rough draft.
     \item Build model(s), functions for validation, and continue to finetune model for accuracy.
@@ -81,4 +92,9 @@ If a robust and accurate garbage classification is successfully implemented, it 
     \item Complete "Conclusion and Discussion" section, ensure that "References" are complete.
     \item Complete any finishing touches on webpage, model, and project report.
 \end{itemize}
+
+\begin{thebibliography}{00}
+  \bibitem{b1} Jouhara, H., Czajczyńska, D., Ghazal, H., Krzyżyńska, R., Anguilano, L., Reynolds, A. J., and Spencer, N. (2017). Municipal waste management systems for domestic use. Energy, 139, 485-506. doi: https://doi.org/10.1016/j.energy.2017.07.162
+\end{thebibliography}
+
 \end{document}
