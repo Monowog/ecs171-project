@@ -6,7 +6,7 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 @st.cache_resource
 
 def load_model():
-    #load model here
+    # model = tf.keras.models.load_model(INSERT FILE HERE)
     return None #model
 
 model = load_model()
