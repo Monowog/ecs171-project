@@ -1,13 +1,15 @@
 import streamlit as st
+import tensorflow as tf
 import numpy as np
 from PIL import Image, ImageOps
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
-@st.cache_resource
+
 
 def load_model():
-    # model = tf.keras.models.load_model(INSERT FILE HERE)
-    return None #model
+    model = tf.keras.models.load_model('best_model.h5')
+    return model 
+
 
 model = load_model()
 
@@ -17,15 +19,16 @@ st.write("""
 
 file = st.file_uploader("Please upload an image of trash you would like to classify below:", type=["jpg","png"])
 
-def import_and_predict(image_data, model):
-    
-    size = (312,584)
-    image = ImageOps.fit(image_data, size, Image.ANTIALIAS)
-    img = np.asarray(image)
-    img_reshape = img[np.newaxis, ...] #add dimension for model compatability
-    #prediction = model.predict(img_reshape)
+def import_and_predict(image, model):
 
-    return None #prediction
+    img_resized = image.resize((96, 128)) 
+    img_array = np.array(img_resized)
+    img_array = np.expand_dims(img_array, axis=0)
+    img_array = img_array / 255.0
+
+    prediction = model.predict(img_array)
+
+    return prediction
 
 if file is None:
     st.text("Please upload an image file")
@@ -34,6 +37,7 @@ else:
     st.image(image, use_column_width=True)
     predictions = import_and_predict(image, model)
     class_names=['glass', 'paper', 'cardboard', 
-           'metal', 'plastic', 'trash']
+           'metal', 'plastic', 'non-recyclable']
     string = "This image is most likely " + class_names[np.argmax(predictions)]
     st.success(string)
+
