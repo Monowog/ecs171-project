@@ -5,11 +5,9 @@ from PIL import Image, ImageOps
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
-
 def load_model():
     model = tf.keras.models.load_model('best_model.h5')
     return model 
-
 
 model = load_model()
 
@@ -17,9 +15,9 @@ st.write("""
          # Trash Classification
          """)
 
-file = st.file_uploader("Please upload an image of trash you would like to classify below:", type=["jpg","png"])
+file = st.file_uploader("Please upload an image of trash you would like to classify below:", type=["jpg"])
 
-def import_and_predict(image, model):
+def import_and_predict(image_data, model):
 
     img_resized = image.resize((96, 128)) 
     img_array = np.array(img_resized)
@@ -36,8 +34,8 @@ else:
     image = Image.open(file)
     st.image(image, use_column_width=True)
     predictions = import_and_predict(image, model)
-    class_names=['glass', 'paper', 'cardboard', 
-           'metal', 'plastic', 'non-recyclable']
+    class_names=['cardboard', 'glass', 'metal', 
+           'paper', 'plastic', 'non-recyclable']
     string = "This image is most likely " + class_names[np.argmax(predictions)]
     st.success(string)
 
