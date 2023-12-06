@@ -3,8 +3,6 @@ import tensorflow as tf
 import numpy as np
 from PIL import Image, ImageOps
 
-st.set_option('deprecation.showfileUploaderEncoding', False)
-
 def load_model():
     model = tf.keras.models.load_model('best_model.h5')
     return model 
