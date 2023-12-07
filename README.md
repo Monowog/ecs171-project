@@ -17,3 +17,5 @@ We built 3 different models:
 Each of which has been uploaded here. Additionally, we included the code for a webpage that runs the CNN, the code used for exploratory data analysis, as well as the dataset itself. 
 ## Exploratory Data Analysis
 This file includes any analysis and figures relevant to our EDA process. 
+
+To view the hosted demo: https://ecs171-group27-project.streamlit.app/
